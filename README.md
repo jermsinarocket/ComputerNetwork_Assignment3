@@ -2,10 +2,14 @@
 
 
 ## Language(s) used
-* JAVA
+* Python
+
+## Development Environment
+* Python 3.6.7
+* Ubuntu 18.04.2
 
 ## IDE(s) used
-* Eclipse
+* PyCharm
 
 ## Contributors
 * [Tan Wei Xuan](https://github.com/jermsinarocket)

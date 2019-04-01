@@ -1,5 +1,6 @@
 # CSED353 Computer Network Assignment 3 (Spring 2019, POSTECH)
 
+Developing an Internet Text & Voice chatting program using sockets.
 
 ## Language(s) used
 * Python

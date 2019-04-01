@@ -1,4 +1,4 @@
-# CSED3535 Computer Network Assignment 3 (WIP)
+# CSED3535 Computer Network Assignment 3 (Spring 2019, POSTECH)
 
 
 ## Language(s) used

@@ -69,9 +69,28 @@ The\textbf{ Internet Text and Voice Messaging Program} that I have implemented i
 My program is written in \textbf{Python 3.6.7} and is developed on \textbf{Windows running the Ubuntu 18.04.2 bit subsystem}, using \textbf{PyCharm} as the \textbf{Integrated Development Environment}. \textit{The program may not work as inteneded if it is ran on other environments.}
 \textit{\textbf{Ensure that these dependencies are being installed on your system}}.
 \begin{enumerate}
-  \item PyAudio
-  \item Threading
-  \item libasound
+  \item \textbf{PyAudio}
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
+\begin{lstlisting}
+#On Ubuntu Terminal
+$ sudo apt-get install python-pyaudio python3-pyaudio
+\end{lstlisting}
+\end{mdframed}
+  \item \textbf{Threading}
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
+\begin{lstlisting}
+#On Ubuntu Terminal
+$ sudo apt install python3-pip #Only if pip is not installed
+$ pip install threaded
+\end{lstlisting}
+\end{mdframed}
+  \item \textbf{libasound}
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
+\begin{lstlisting}
+#On Ubuntu Terminal
+$ sudo apt-get install libasound2-dev
+\end{lstlisting}
+\end{mdframed}
 \end{enumerate}
 
 \section{Implementation - Text Chat}

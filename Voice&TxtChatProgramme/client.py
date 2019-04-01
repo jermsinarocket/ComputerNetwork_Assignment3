@@ -84,9 +84,9 @@ def send_voice():
 			break
 
 
-HOST = input("Enter the Host: ")
-PORT_TEXT = 3001   # port of server being connected to
-PORT_VOICE = 50007
+HOST = input("Enter the Host: ") # Default 127.0.0.1
+PORT_TEXT = 2222   # TEXT port of server to connect to
+PORT_VOICE = 55555 # VOICE port of server to connect to
 
 BUFSIZ = 1024
 ADDR_TEXT = (HOST, PORT_TEXT)

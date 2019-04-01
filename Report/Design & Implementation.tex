@@ -61,7 +61,7 @@ The\textbf{ Internet Text and Voice Messaging Program} that I have implemented i
 \end{itemize}
 	\item \textbf{Client Files}
 \begin{itemize}
-  	\item client.java
+  	\item client.py
 \end{itemize}
 \end{enumerate}
 
@@ -88,7 +88,7 @@ $ pip install threaded
 \begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
 \begin{lstlisting}
 #On Ubuntu Terminal
-$ sudo apt-get install libasound2-dev
+$ sudo apt-get install libasound2-devf
 \end{lstlisting}
 \end{mdframed}
 \end{enumerate}
@@ -96,7 +96,7 @@ $ sudo apt-get install libasound2-dev
 \section{Implementation - Text Chat}
 
 \subsection{Client - Receving Text }
-Below is the handler for how a client receives text sent from other clients through the server. The Client is binded to the Server Text Port on 3001.
+Below is the handler for how a client receives text sent from other clients through the server. The Client is binded to the Server Text Port on \textit{2222}.
 \begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
 \begin{lstlisting}
 #Client.py
@@ -128,7 +128,7 @@ def send_text():
 \end{mdframed}
 
 \subsection{Server - Accept Connection to Text Port}
-Below is the handler for how the server accepts a connection from the client onto the Text Port. The Text Port that the client connect to is /textit{P3001}. Whenever a client is connected to the port, a thread if attached to the client to handle it.
+Below is the handler for how the server accepts a connection from the client onto the Text Port. The Text Port that the client connect to is \textit{2222}. Whenever a client is connected to the port, a thread if attached to the client to handle it.
 \begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
 \begin{lstlisting}
 #Server.py
@@ -203,7 +203,7 @@ stream_recv = p.open(
 \end{mdframed}
 
 \subsection{Client - Sending/Receiving  Audio}
-The client have to handles both sending/receiving voice simulatanuously. The below two functions are for receiving and playing the voice sent from the server and for sending voice inputs from the client to the server.
+The client have to handles both sending/receiving voice simulatanuously. The below two functions are for receiving and playing the voice sent from the server and for sending voice inputs from the client to the server. The Client is binded to the Server Voice Port on \textit{55555}.
 \begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
 \begin{lstlisting}
 #Client.py
@@ -230,7 +230,7 @@ clientSocket.close();
 \end{mdframed}
 
 \subsection{Server - Accept Connection to Voice Port}
-Below is the handler for how the server accepts a connection from the client onto the Voice Port. The Voice Port that the client connect to is /textit{50007}. Whenever a client is connected to the port, a thread if attached to the client to handle it.
+Below is the handler for how the server accepts a connection from the client onto the Voice Port. The Voice Port that the client connect to is \textit{55555}. Whenever a client is connected to the port, a thread if attached to the client to handle it.
 
 \begin{mdframed}[backgroundcolor=light-gray, roundcorner=30pt,leftmargin=1, rightmargin=1, innerleftmargin=5, innertopmargin=-3,innerbottommargin=5, outerlinewidth=1, linecolor=light-gray]
 \begin{lstlisting}
@@ -283,5 +283,8 @@ def handle_client_voice(client):
    \newline
    \includegraphics{exit}
 \end{enumerate}
+
+\section{Limitations}
+Our Program is executed on a single machine running multiple clients, that is the machine is the host of the server as well as the host for all the clients. The voice feedback (echo) as heard from \textit{Screen Record of Program Execution.mp4} signifies that the voice has been received and played from one client to another. Future improvements can bbe made to allow the server and clients to run on seperate machines.
 
 \end{document}
